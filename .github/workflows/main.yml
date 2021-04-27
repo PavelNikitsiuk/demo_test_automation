@@ -1,0 +1,33 @@
+# This is a basic workflow to help you get started with Actions
+
+name: KEK
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: End
+        run: |
+          echo Build passed successefully.
+
+  run_test:
+     runs-on: ubuntu-latest
+     needs: [build]
+     steps:
+      - uses: actions/checkout@v2
+  
+      - name: Run tests
+        run: npm run tests
