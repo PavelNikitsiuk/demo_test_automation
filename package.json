@@ -1,0 +1,11 @@
+{
+  "name": "demo_test_automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "^18.1.0"
+  }
+}
