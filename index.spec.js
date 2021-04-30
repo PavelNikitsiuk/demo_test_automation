@@ -4,8 +4,8 @@ describe('Kek', () => {
   describe('add', () => {
     it('adds two numbers together', () => {
       const mathLib = new Kek();
-      const result = mathLib.add(1, 2);
-      expect(result).toBe(3);
+      const result = mathLib.add(1400, 88);
+      expect(result).toBe(1488);
     });
   });
 
